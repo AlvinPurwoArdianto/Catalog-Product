@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +25,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('kategori', KategoriController::class);
+Route::resource('supplier', SupplierController::class);
+Route::resource('produk', ProdukController::class);

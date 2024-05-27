@@ -18,6 +18,9 @@
             <li>
                 <a href="{{ route('kategori.index') }}" class=""><i class="fa fa-table fa-fw"></i> Data Kategori</a>
             </li>
+            <li>
+                <a href="{{ route('supplier.index') }}" class=""><i class="fa fa-table fa-fw"></i> Data Supplier</a>
+            </li>
             {{-- <li>
                 <a href="{{ route('buku.index') }}" class=""><i class="fa fa-table fa-fw"></i> Data Buku</a>
             </li> --}}
