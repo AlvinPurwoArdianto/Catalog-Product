@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Produk;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller
@@ -25,7 +27,10 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        //
+        $kategori = Kategori::all();
+        $supplier = Supplier::all();
+        return view('produk.create', compact('kategori', 'supplier'));
+
     }
 
     /**
@@ -36,7 +41,16 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $produk = new Produk();
+        $produk->nama_produk = $request->nama_produk;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->harga = $request->harga;
+        $produk->id_kategori = $request->id_kategori;
+        $produk->id_supplier = $request->id_supplier;
+        $produk->save();
+        return redirect()->route('produk.index')
+            ->with('success', 'Data Berhasil Ditambahkan');
+
     }
 
     /**
