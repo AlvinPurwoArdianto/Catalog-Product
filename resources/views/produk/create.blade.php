@@ -94,6 +94,10 @@
                                                         @endforeach
                                                     </select>
                                                 </div>
+                                                <div class="form-group">
+                                                    <label>Gambar</label>
+                                                    <input type="file" class="form-control" name="cover">
+                                                </div>
                                                 <a href="{{route('produk.index')}}"class="btn btn-default">Kembali</a>
                                                 <button type="submit" class="btn btn-default">Tambah</button>
                                             </form>

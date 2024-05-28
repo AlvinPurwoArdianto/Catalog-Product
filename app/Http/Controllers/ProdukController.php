@@ -14,6 +14,10 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $produk = Produk::all();
@@ -47,6 +51,14 @@ class ProdukController extends Controller
         $produk->harga = $request->harga;
         $produk->id_kategori = $request->id_kategori;
         $produk->id_supplier = $request->id_supplier;
+
+        if ($request->hasFile('cover')) {
+            $img = $request->file('cover');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/produk', $name);
+            $produk->cover = $name;
+        }
+
         $produk->save();
         return redirect()->route('produk.index')
             ->with('success', 'Data Berhasil Ditambahkan');
@@ -61,7 +73,9 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        //
+        $produk = Produk::findOrFail($id);
+        return view('produk.show', compact('produk'));
+
     }
 
     /**
@@ -72,7 +86,10 @@ class ProdukController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produk = Produk::findOrFail($id);
+        $kategori = Kategori::all();
+        $supplier = supplier::all();
+        return view('produk.edit', compact('produk', 'kategori', 'supplier'));
     }
 
     /**
@@ -84,7 +101,24 @@ class ProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $produk = Produk::findOrFail($id);
+        $produk->nama_produk = $request->nama_produk;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->harga = $request->harga;
+        $produk->id_kategori = $request->id_kategori;
+        $produk->id_supplier = $request->id_supplier;
+
+        if ($request->hasFile('cover')) {
+            $img = $request->file('cover');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/produk', $name);
+            $produk->cover = $name;
+        }
+
+        $produk->save();
+        return redirect()->route('produk.index')
+            ->with('success', 'Data Berhasil Diubah');
+
     }
 
     /**
@@ -95,6 +129,10 @@ class ProdukController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produk = Produk::findOrFail($id);
+        $produk->delete();
+        return redirect()->route('produk.index')
+            ->with('success', 'Data Berhasil Dihapus');
+
     }
 }

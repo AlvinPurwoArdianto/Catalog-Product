@@ -65,9 +65,9 @@
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <a href="{{ route('kategori.create') }}" class="btn btn-primary">Tambah</a>
-                                        @if (session('success'))
-                                            <div class="alert alert-success" role="alert">
-                                                {{ session('success') }}
+                                        @if (session('danger'))
+                                            <div class="alert alert-danger" role="alert">
+                                                {{ session('danger') }}
                                             </div>
                                         @endif
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">

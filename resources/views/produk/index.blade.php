@@ -79,6 +79,7 @@
                                                     <th>Harga</th>
                                                     <th>Kategori</th>
                                                     <th>Sipplier</th>
+                                                    <th>Gambar</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>
@@ -94,6 +95,9 @@
                                                         <td>{{ $data->harga }}</td>
                                                         <td>{{ $data->kategori->nama_kategori }}</td>
                                                         <td>{{ $data->supplier->nama_supplier }}</td>
+                                                        <td>
+                                                            <img src="{{ asset('/images/produk/' . $data->cover) }}" width="100">
+                                                        </td>
                                                         <form action="{{ route('produk.destroy', $data->id) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
