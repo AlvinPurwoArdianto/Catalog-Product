@@ -94,7 +94,7 @@
                                                 @csrf
                                                 <div class="form-group">
                                                     <label>Gambar</label>
-                                                    <img src="{{ asset('/images/produk/' . $produk->cover) }}" width="100%" height="100%">
+                                                    <img src="{{ asset('/images/produk/' . $produk->cover) }}" width="70%" height=100%">
                                                 </div>
                                             </form>
                                         </div>

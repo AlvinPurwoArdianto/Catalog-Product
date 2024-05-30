@@ -21,4 +21,12 @@ class Produk extends Model
     {
         return $this->belongsTo(Supplier::class, 'id_supplier');
     }
+
+    //menghapus img
+    public function deleteImage()
+    {
+        if ($this->cover && file_exists(public_path('images/produk' . $this->cover))) {
+            return unlink(public_path('images/produk' . $this->cover));
+        }
+    }
 }

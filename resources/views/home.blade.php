@@ -56,7 +56,108 @@
                         </div>
                     </div>
                     <div class="row">
-                        asdnalsd
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Kategori
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div class="table-responsive table-bordered">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Kategori</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @php
+                                                    $no=1;
+                                                @endphp
+                                                @foreach ($kategori as $data)
+                                                <tr>
+                                                    <td>{{$no++}}</td>
+                                                    <td>{{$data->nama_kategori}}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Supplier
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div class="table-responsive table-bordered">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Supplier</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @php
+                                                    $no=1;
+                                                @endphp
+                                                @foreach ($supplier as $data)
+                                                <tr>
+                                                    <td>{{$no++}}</td>
+                                                    <td>{{$data->nama_supplier}}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Produk
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div class="table-responsive table-bordered">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Produk</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @php
+                                                    $no=1;
+                                                @endphp
+                                                @foreach ($produk as $data)
+                                                <tr>
+                                                    <td>{{$no++}}</td>
+                                                    <td>{{$data->nama_produk}}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,7 +178,7 @@
         <script src="{{ asset('admin/js/morris-data.js') }}"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="{{ asset('admin/js/startmin.js"></script>
+        <script src="{{ asset('admin/js/startmin.js') }}"></script>
 
     </body>
 </html>

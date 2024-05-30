@@ -46,7 +46,7 @@ class KategoriController extends Controller
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->save();
         return redirect()->route('kategori.index')
-            ->with('danger', 'Data Berhasil Ditambahkan');
+            ->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -88,7 +88,7 @@ class KategoriController extends Controller
 
         $kategori->save();
         return redirect()->route('kategori.index')
-            ->with('danger', 'Data Berhasil Diubah');
+            ->with('success', 'Data Berhasil Diubah');
 
     }
 
@@ -103,7 +103,7 @@ class KategoriController extends Controller
         $kategori = Kategori::findOrFail($id);
         $kategori->delete();
         return redirect()->route('kategori.index')
-            ->with('danger', 'Data Berhasil Dihapus');
+            ->with('success', 'Data Berhasil Dihapus');
 
     }
 }

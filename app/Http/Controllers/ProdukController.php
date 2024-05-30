@@ -88,7 +88,7 @@ class ProdukController extends Controller
     {
         $produk = Produk::findOrFail($id);
         $kategori = Kategori::all();
-        $supplier = supplier::all();
+        $supplier = Supplier::all();
         return view('produk.edit', compact('produk', 'kategori', 'supplier'));
     }
 
@@ -109,6 +109,7 @@ class ProdukController extends Controller
         $produk->id_supplier = $request->id_supplier;
 
         if ($request->hasFile('cover')) {
+            $produk->deleteImage();
             $img = $request->file('cover');
             $name = rand(1000, 9999) . $img->getClientOriginalName();
             $img->move('images/produk', $name);

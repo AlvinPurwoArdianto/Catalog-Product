@@ -97,6 +97,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Gambar</label>
+                                                    <img src="{{ asset('/images/produk/' . $data->cover) }}" width="100"> 
                                                     <input type="file" class="form-control" name="cover">
                                                 </div>
                                                 <a href="{{route('produk.index')}}"class="btn btn-default">Kembali</a>
