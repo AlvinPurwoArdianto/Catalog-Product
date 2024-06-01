@@ -96,10 +96,11 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Gambar</label>
+                                                        <img src="{{ asset('/images/produk/' . $data->cover) }}" width="100">
                                                     <input type="file" class="form-control" name="cover">
                                                 </div>
-                                                <a href="{{route('produk.index')}}"class="btn btn-default">Kembali</a>
-                                                <button type="submit" class="btn btn-default">Tambah</button>
+                                                <a href="{{route('produk.index')}}"class="btn btn-primary">Kembali</a>
+                                                <button type="submit" class="btn btn-danger">Tambah</button>
                                             </form>
                                         </div>
                                     </div>
@@ -126,7 +127,7 @@
         <script src="{{ asset('admin/js/morris-data.js') }}"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="{{ asset('admin/js/startmin.js"></script>
+        <script src="{{ asset('admin/js/startmin.js')}}"></script>
 
     </body>
 </html>

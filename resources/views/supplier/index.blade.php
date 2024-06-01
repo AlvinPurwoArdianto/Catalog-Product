@@ -59,8 +59,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    Tabel Data supplier
+                                <div class="panel-heading">Data supplier
+                                    <a href="{{ route('supplier.create') }}" class="btn btn-primary ms-4" style="float: right; margin-top: -7px;"  >Tambah</a>
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
@@ -101,7 +101,6 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                        <a href="{{ route('supplier.create') }}" class="btn btn-primary">Tambah</a>
                                     </div>
                                     <!-- /.table-responsive -->
                                 </div>

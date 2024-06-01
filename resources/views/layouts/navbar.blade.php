@@ -1,5 +1,5 @@
 <div class="navbar-header">
-                    <a class="navbar-brand" href="">Admin</a>
+                    <a class="navbar-brand" href="/">ACRSZ2</a>
                 </div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -11,7 +11,7 @@
                 <ul class="nav navbar-right navbar-top-links">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> admin <b class="caret"></b>
+                            <i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }}<b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
                             <li>

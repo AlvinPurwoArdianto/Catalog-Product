@@ -58,8 +58,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    Tabel Data produk
+                                <div class="panel-heading pt-3">Data produk
+                                    <a href="{{ route('produk.create') }}" class="btn btn-primary ms-4" style="float: right; margin-top: -7px;"  >Tambah</a>
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
@@ -100,7 +100,7 @@
                                                         <form action="{{ route('produk.destroy', $data->id) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <td class="center">
+                                                            <td class="center col">
                                                                 <a href="{{ route('produk.edit', $data->id) }}" class="btn btn-success">Ubah</a>
                                                                 <a href="{{ route('produk.show', $data->id) }}" class="btn btn-warning">Detail</a>
                                                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Yakin Ingin Menghapus??')">Hapus</button>
@@ -110,7 +110,6 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
-                                            <a href="{{ route('produk.create') }}" class="btn btn-primary">Tambah</a>
                                         </div>
                                 </div>
                                 <!-- /.panel-body -->

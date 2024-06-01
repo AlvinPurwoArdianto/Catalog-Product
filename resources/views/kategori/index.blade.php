@@ -61,8 +61,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Data Kategori
+                            <div class="panel-heading">Data Kategori
+                                <a href="{{ route('kategori.create') }}" class="btn btn-primary ms-4" style="float: right; margin-top: -7px;"  >Tambah</a>
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
@@ -98,7 +98,6 @@
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    <a href="{{route('kategori.create')}}" class="btn btn-primary m-1">Tambah</a>
                                 </div>
                             </div>
                             <!-- /.panel-body -->

@@ -97,7 +97,7 @@
         <script src="{{ asset('admin/js/morris-data.js') }}"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="{{ asset('admin/js/startmin.js"></script>
+        <script src="{{ asset('admin/js/startmin.js')}}"></script>
 
     </body>
 </html>
