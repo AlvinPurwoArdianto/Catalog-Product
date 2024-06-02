@@ -69,11 +69,11 @@
                                                 @method('PUT')
                                                 <div class="form-group">
                                                     <label>Nama supplier</label>
-                                                    <input type="text" class="form-control" name="nama_supplier" placeholder="Nama supplier">
+                                                    <input type="text" class="form-control" name="nama_supplier" placeholder="Nama supplier" value="{{$supplier->nama_supplier}}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Alamat</label>
-                                                    <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                                                    <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="{{$supplier->alamat}}">
                                                 </div>
                                                 <a href="{{route('supplier.index')}}"class="btn btn-default">Kembali</a>
                                                 <button type="submit" class="btn btn-default">Edit</button>

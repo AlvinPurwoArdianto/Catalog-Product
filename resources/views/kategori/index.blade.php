@@ -87,9 +87,9 @@
                                                         method="post">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="{{route('kategori.show', $data->id)}}"
-                                                            class="btn btn-success m-1">Ubah</a>
                                                         <a href="{{route('kategori.edit', $data->id)}}"
+                                                            class="btn btn-success m-1">Ubah</a>
+                                                        <a href="{{route('kategori.show', $data->id)}}"
                                                             class="btn btn-warning m-1">Detail</a>
                                                         <button type="submit" class="btn btn-danger m-1">Hapus</button>
                                                     </form>
