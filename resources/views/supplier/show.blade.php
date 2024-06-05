@@ -71,7 +71,11 @@
                                                     <input type="text" class="form-control" name="nama_supplier" value="{{ $supplier->nama_supplier }}" disabled>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Nama supplier</label>
+                                                    <label>Nama brand</label>
+                                                    <input type="text" class="form-control" name="nama_brand" value="{{ $supplier->nama_brand }}" disabled>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Alamat</label>
                                                     <input type="text" class="form-control" name="alamat" value="{{ $supplier->alamat }}" disabled>
                                                 </div>
                                                 <a href="{{route('supplier.index')}}"class="btn btn-default">Kembali</a>

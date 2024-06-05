@@ -9,7 +9,7 @@ class Supplier extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'nama_supplier', 'alamat'];
+    protected $fillable = ['id', 'nama_supplier', 'alamat', 'nama_brand'];
     public $timestamp = true;
 
     public function produk()

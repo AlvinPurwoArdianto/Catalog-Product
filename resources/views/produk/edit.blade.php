@@ -69,15 +69,15 @@
                                                 @method('PUT')
                                                 <div class="form-group">
                                                     <label>Nama produk</label>
-                                                    <input type="text" class="form-control" name="nama_produk" placeholder="Nama produk">
+                                                    <input type="text" class="form-control" name="nama_produk" placeholder="Nama produk" value="{{$produk->nama_produk}}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Deskripsi</label>
-                                                    <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
+                                                    <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" value="{{$produk->deskripsi}}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Harga</label>
-                                                    <input type="number" class="form-control" name="harga" placeholder="Harga">
+                                                    <input type="number" class="form-control" name="harga" placeholder="Harga" value="{{$produk->harga}}">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Kategori</label>
@@ -96,8 +96,16 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label class="form-label">Brand</label>
+                                                    <select class="form-control" name="nama_brand">
+                                                        @foreach ($supplier as $data)
+                                                            <option value="{{ $data->id }}">{{ $data->nama_brand }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
                                                     <label>Gambar</label>
-                                                    <img src="{{ asset('/images/produk/' . $data->cover) }}" width="100">
+                                                    <img src="{{ asset('/images/produk/' . $produk->cover) }}" width="100">
                                                     <input type="file" class="form-control" name="cover">
                                                 </div>
                                                 <a href="{{route('produk.index')}}"class="btn btn-default">Kembali</a>

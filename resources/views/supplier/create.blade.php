@@ -71,6 +71,10 @@
                                                     <input type="text" class="form-control" name="nama_supplier" placeholder="Nama Supplier">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label>Nama Supplier</label>
+                                                    <input type="text" class="form-control" name="nama_brand" placeholder="Nama Brand">
+                                                </div>
+                                                <div class="form-group">
                                                     <label>Alamat</label>
                                                     <input type="text" class="form-control" name="alamat" placeholder="Alamat">
                                                 </div>

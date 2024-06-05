@@ -75,6 +75,7 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Nama supplier</th>
+                                                    <th>Nama brand</th>
                                                     <th>Alamat</th>
                                                     <th>Aksi</th>
                                                 </tr>
@@ -87,13 +88,14 @@
                                                 <tr class="odd gradeX">
                                                     <td>{{ $no++ }}</td>
                                                     <td>{{ $data->nama_supplier }}</td>
+                                                    <td>{{ $data->nama_brand }}</td>
                                                     <td>{{ $data->alamat }}</td>
                                                     <form action="{{ route('supplier.destroy', $data->id) }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <td class="center">
-                                                            <a href="{{ route('supplier.edit', $data->id) }}" class="btn btn-success">Ubah</a>
-                                                            <a href="{{ route('supplier.show', $data->id) }}" class="btn btn-warning">Detail</a>
+                                                            <a href="{{ route('supplier.edit', $data->id) }}" class="btn btn-success">Ubah</a> |
+                                                            <a href="{{ route('supplier.show', $data->id) }}" class="btn btn-warning">Detail</a> |
                                                             <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Yakin Ingin Menghapus??')">Hapus</button>
                                                         </td>
                                                     </form>

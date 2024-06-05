@@ -95,6 +95,14 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label class="form-label">Brand</label>
+                                                    <select class="form-control" name="nama_brand">
+                                                        @foreach ($supplier as $data)
+                                                            <option value="{{ $data->id }}">{{ $data->nama_brand }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
                                                     <label>Gambar</label>
                                                         <img src="{{ asset('/images/produk/' . $data->cover) }}" width="100">
                                                     <input type="file" class="form-control" name="cover">

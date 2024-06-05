@@ -42,6 +42,10 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_kategori' => 'required',
+        ]);
+
         $kategori = new Kategori();
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->save();

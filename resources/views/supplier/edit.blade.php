@@ -72,6 +72,10 @@
                                                     <input type="text" class="form-control" name="nama_supplier" placeholder="Nama supplier" value="{{$supplier->nama_supplier}}">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label>Nama supplier</label>
+                                                    <input type="text" class="form-control" name="nama_brand" placeholder="Nama supplier" value="{{$supplier->nama_brand}}">
+                                                </div>
+                                                <div class="form-group">
                                                     <label>Alamat</label>
                                                     <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="{{$supplier->alamat}}">
                                                 </div>

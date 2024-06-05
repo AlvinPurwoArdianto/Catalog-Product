@@ -12,12 +12,16 @@ class SupplierController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
     }
-    public function index()
+    public function index(Request $request)
     {
-        $supplier = Supplier::all();
+        $order = $request->get('order', 'asc');
+        $supplier = Supplier::orderBy('nama_supplier', $order)->get();
+
+        // $supplier = Supplier::all();
         return view('supplier.index', compact('supplier'));
     }
 
@@ -42,6 +46,7 @@ class SupplierController extends Controller
     {
         $supplier = new Supplier();
         $supplier->nama_supplier = $request->nama_supplier;
+        $supplier->nama_brand = $request->nama_brand;
         $supplier->alamat = $request->alamat;
         $supplier->save();
         return redirect()->route('supplier.index')
@@ -86,6 +91,7 @@ class SupplierController extends Controller
     {
         $supplier = Supplier::findOrFail($id);
         $supplier->nama_supplier = $request->nama_supplier;
+        $supplier->nama_brand = $request->nama_brand;
         $supplier->alamat = $request->alamat;
 
         $supplier->save();

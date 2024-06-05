@@ -45,6 +45,16 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'nama_produk' => 'required',
+            'deskripsi' => 'required',
+            'harga' => 'required',
+            'id_kategori' => 'required',
+            'id_supplier' => 'required',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
         $produk = new Produk();
         $produk->nama_produk = $request->nama_produk;
         $produk->deskripsi = $request->deskripsi;
@@ -106,6 +116,7 @@ class ProdukController extends Controller
         $produk->deskripsi = $request->deskripsi;
         $produk->harga = $request->harga;
         $produk->id_kategori = $request->id_kategori;
+        $produk->id_supplier = $request->id_supplier;
         $produk->id_supplier = $request->id_supplier;
 
         if ($request->hasFile('cover')) {
