@@ -43,7 +43,7 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_kategori' => 'required',
+            'nama_kategori' => 'required|min:2|max:255',
         ]);
 
         $kategori = new Kategori();
@@ -87,6 +87,10 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'nama_kategori' => 'required',
+        ]);
+
         $kategori = Kategori::findOrFail($id);
         $kategori->nama_kategori = $request->nama_kategori;
 

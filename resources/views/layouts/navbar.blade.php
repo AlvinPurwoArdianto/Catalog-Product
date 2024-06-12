@@ -1,5 +1,5 @@
 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">ACRSZ2</a>
+                    <a class="navbar-brand" href="/">{{ Auth::user()->name }}</a>
                 </div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

@@ -85,9 +85,9 @@
                                 <div class="banner_taital_main">
                                     <h1 class="banner_taital">Cari Produkmu Disini!</h1>
                                     <form>
-                                        <input type="text" class="search_text" placeholder="Search text here"
-                                            name="Search text here">
-                                        <div class="search_bt"><a href="#">Search Now</a></div>
+                                        <input type="text" class="search_text" placeholder="Cari Produkmu Disini?"
+                                            name="Cari Produkmu Disini?">
+                                        <div class="search_bt"><a href="">Search Now</a></div>
                                     </form>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                                 going to use a passage of Lorem Ipsum, you need to be sure there isn't
                                             </p>
                                             <div class="readmore_btn">
-                                                <div class="readmore_btn"><a href="#">Read More</a></div>
+                                                <div class="readmore_btn"><a href="{{url('tampil', $data->id)}}">Read More</a></div>
                                             </div>
                                         </div>
                                     @endforeach
@@ -167,12 +167,7 @@
                     <div class="newslatter_main">
                         <h1 class="useful_text">Follow Us</h1>
                         <div class="footer_social_icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
+                            rgvvrgrefvgf
                         </div>
                     </div>
                 </div> --}}

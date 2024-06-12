@@ -44,6 +44,12 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_supplier' => 'required',
+            'nama_brand' => 'required',
+            'alamat' => 'required',
+        ]);
+
         $supplier = new Supplier();
         $supplier->nama_supplier = $request->nama_supplier;
         $supplier->nama_brand = $request->nama_brand;
@@ -51,7 +57,6 @@ class SupplierController extends Controller
         $supplier->save();
         return redirect()->route('supplier.index')
             ->with('success', 'Data Berhasil Ditambahkan');
-
     }
 
     /**
@@ -89,6 +94,12 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'nama_supplier' => 'required',
+            'nama_brand' => 'required',
+            'alamat' => 'required',
+        ]);
+        
         $supplier = Supplier::findOrFail($id);
         $supplier->nama_supplier = $request->nama_supplier;
         $supplier->nama_brand = $request->nama_brand;
